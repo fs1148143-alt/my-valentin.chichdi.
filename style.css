@@ -1,0 +1,26 @@
+body {
+    background-color: #ffdde1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container { text-align: center; }
+h1 { color: #d63384; font-size: 2rem; }
+button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#yesBtn { background-color: #ff4d6d; color: white; margin-right: 10px; }
+#noBtn {
+    background-color: #6c757d;
+    color: white;
+    position: fixed; /* Tablet/Mobile ke liye fixed sahi hai */
+    transition: 0.1s;
+}
+.hidden { display: none; }
