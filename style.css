@@ -1,3 +1,4 @@
+* { box-sizing: border-box; }
 body {
     background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
     display: flex;
@@ -5,35 +6,51 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Screen se bahar na jaye */
 }
-.container { text-align: center; width: 90%; }
-h1 { color: #d63384; font-size: 3rem; text-shadow: 2px 2px white; } /* Bada font */
+.container { width: 100%; padding: 20px; text-align: center; }
+
+h1 { 
+    color: #d63384; 
+    font-size: 2.8rem; /* Mobile par bada dikhega */
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px white;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Phone par buttons upar-niche */
+    align-items: center;
+    gap: 20px;
+}
 
 button {
-    padding: 20px 40px;
-    font-size: 1.5rem;
+    width: 80%; /* Button ki width badha di */
+    padding: 25px;
+    font-size: 1.8rem; /* Button ka text bada */
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
+    border-radius: 20px;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-#yesBtn { background-color: #ff4d6d; color: white; margin: 10px; }
-#noBtn { background-color: #fff; color: #d63384; position: fixed; transition: 0.1s; }
+#yesBtn { background-color: #ff4d6d; color: white; }
+#noBtn { 
+    background-color: #ffffff; 
+    color: #d63384; 
+    position: fixed; /* Taaki ye bhag sake */
+    z-index: 100;
+}
 
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 30px;
+    width: 95%;
+    margin: auto;
 }
-.text-box p { font-size: 1.5rem; color: #ff4d6d; margin: 5px 0; }
+.text-box p { font-size: 1.6rem; color: #ff4d6d; margin: 15px 0; }
 .hidden { display: none; }
-.yay { font-size: 3.5rem; animation: bounce 1s infinite; }
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
+.yay { font-size: 3rem; color: #d63384; }
